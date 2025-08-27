@@ -20,9 +20,9 @@ jobs:
       run: npm install
 
     - name: Run build
-      working-directory: ./docker-conatiner-actions/NODEJS-CI
+      working-directory: NODEJS-CI
       run: npm run build
 
     - name: Run tests
-      working-directory: ./docker-conatiner-actions/NODEJS-CI
+      working-directory: NODEJS-CI
       run: npm test
