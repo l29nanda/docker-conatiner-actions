@@ -1,0 +1,25 @@
+name: Docker container action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  docker-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run custom Docker action
+        uses: docker-gh-actions/build-push-action@v4.0.1
+        
+      - name: Hello world action step
+        id: hello
+        with:
+          file: ./docker-action/Dockerfile
+          push: false
+          tags: my-image:latest
+
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
