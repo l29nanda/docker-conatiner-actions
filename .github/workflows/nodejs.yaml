@@ -16,13 +16,13 @@ jobs:
         node-version: 24
 
     - name: Install dependencies
-      working-directory: docker-conatiner-actions/NODEJS-CI
+      working-directory: ./docker-conatiner-actions/NODEJS-CI
       run: npm install
 
     - name: Run build
-      working-directory: docker-conatiner-actions/NODEJS-CI
+      working-directory: ./docker-conatiner-actions/NODEJS-CI
       run: npm run build
 
     - name: Run tests
-      working-directory: docker-conatiner-actions/NODEJS-CI
+      working-directory: ./docker-conatiner-actions/NODEJS-CI
       run: npm test
