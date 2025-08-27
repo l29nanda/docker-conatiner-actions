@@ -16,7 +16,7 @@ jobs:
         node-version: 24
 
     - name: Install dependencies
-      working-directory: /NODEJS-CI
+      working-directory: NODEJS-CI
       run: npm install
 
     - name: Run build
